@@ -1,0 +1,41 @@
+const {
+    float e = 2.7182, pi = 3.1415, raizd2 = 1.4142; 
+    float k = 271.99; 
+    int Max = 100;
+    int Min = 0; 
+}
+var {
+    float R; 
+} 
+procedure main(){
+var {
+    int i;
+    float x;
+}
+    for(i = Min; i<=Max; i++){
+        
+        write("Escreva o valor do raio da circuferência ");
+        read(x); 
+        R = circuferencia(x);
+
+        
+         if ( (R != e) && (R < k-pi*pi) )  { 
+            write(R);
+        }else {
+            if ( (R > raizd2) )  
+            {
+                x = R+raizd2;
+                write(x);
+             } 
+        } 
+    } 
+}  
+function float circuferencia(float r){
+    var {
+        float resultado,res_cir;
+    } 
+    
+    res_cir = 2.0*pi*r; 
+
+.resultado = res_cir;
+}

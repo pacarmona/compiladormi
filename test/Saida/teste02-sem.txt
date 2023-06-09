@@ -1,0 +1,7 @@
+Erro Semântico: O tipo do operando '1.1' na operação da linha 14 é diferente do tipo da operação.
+Erro Semântico: O tipo do operando '2.1' na operação da linha 14 é diferente do tipo da operação.
+Erro Semântico: O tipo do operando '1' na operação da linha 16 é diferente do tipo da operação.
+Erro Semântico: O tipo do operando '3' na operação da linha 16 é diferente do tipo da operação.
+Erro Semântico: O tipo do operando '1' na operação da linha 18 é diferente do tipo da operação.
+Erro Semântico: O tipo do operando 'true' na operação da linha 19 é diferente do tipo da operação.
+Erro Semântico: O tipo do operando '"true"' na operação da linha 21 é diferente do tipo da operação.

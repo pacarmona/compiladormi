@@ -1,0 +1,12 @@
+Erro Semântico: A constante 'constante_inteira' na linha 33 não pode receber valor de atribuição fora do bloco de constantes.
+Erro Semântico: A constante 'constante_real' na linha 34 não pode receber valor de atribuição fora do bloco de constantes.
+Erro Semântico: A constante 'constante_cadeira' na linha 35 não pode receber valor de atribuição fora do bloco de constantes.
+Erro Semântico: A constante 'constante_boleana' na linha 36 não pode receber valor de atribuição fora do bloco de constantes.
+Erro Semântico: O identificador 'variavel_inteira' da linha 47 não foi declarado.
+Erro Semântico: O identificador 'variavel_real' da linha 48 não foi declarado.
+Erro Semântico: O identificador 'variavel_cadeira' da linha 49 não foi declarado.
+Erro Semântico: O identificador 'variavel_boleana' da linha 50 não foi declarado.
+Erro Semântico: O tipo do identificador 'variavel_inteira_G' na operação da linha 71 é diferente do tipo da operação.
+Erro Semântico: O tipo do identificador 'variavel_real_G' na operação da linha 72 é diferente do tipo da operação.
+Erro Semântico: O tipo do identificador 'variavel_cadeira_G' na operação da linha 73 é diferente do tipo da operação.
+Erro Semântico: O tipo do identificador 'variavel_boleana_G' na operação da linha 74 é diferente do tipo da operação.

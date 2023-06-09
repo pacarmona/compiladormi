@@ -1,0 +1,37 @@
+const {
+    int xss =1;
+
+}
+var{
+        int resultado;
+       
+}
+
+
+
+
+function int main(    ){
+   
+var {
+    int sad,a;
+    float b;
+    string c;
+    boolean d;  
+     
+}  
+      
+      a = x(a,b,c);
+             
+      a = x(a,b,c,d);
+      
+      a = x(d,c,b,a);
+        
+      a = x(a,c,b,d);
+
+.resultado = sad;
+}
+
+procedure x( int a1; float a2; string a3; boolean a4; ){
+
+
+}

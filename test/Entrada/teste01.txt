@@ -1,0 +1,95 @@
+const{
+
+      int constante_inteira = 1;
+      float constante_real = 1.1;
+      string constante_cadeira = "";
+      boolean constante_boleana = true;
+
+      int constante_inteira1 = constante_inteira;
+      float constante_real1 = constante_real ;
+      string constante_cadeira1 = constante_cadeira;
+      boolean constante_boleana1 = constante_boleana ; 
+}
+var { 
+
+    int variavel_inteira_G; 
+    float variavel_real_G; 
+    string variavel_cadeira_G; 
+    boolean variavel_boleana_G;
+    
+}
+procedure main ( int param_inteira_G;   float param_real_G;    string param_cadeira_G;    boolean param_boleana_G; ){
+ 
+  var { 
+
+        int variavel_inteira_I; 
+        float variavel_real_I; 
+        string variavel_cadeira_I; 
+        boolean variavel_boleana_I;
+    
+    } 
+
+       //TESTE DE ATRIBUIÇÃO EM CONSTANTE
+        constante_inteira = 1;
+        constante_real = 1.1;
+        constante_cadeira = "";
+        constante_boleana = true;
+
+       //TESTE DE ATRIBUIÇÃO EM VARIAVEL TIPOS DIFERENTES
+        
+        // atribuicao de constantes na variavel
+        variavel_inteira_G  = constante_inteira; 
+        variavel_real_G     = constante_real; 
+        variavel_cadeira_G  = constante_cadeira; 
+        variavel_boleana_G  = constante_boleana ;
+        
+        // atribuicao de variavel n declarada 
+        variavel_inteira_G  = variavel_inteira; 
+        variavel_real_G     = variavel_real; 
+        variavel_cadeira_G  = variavel_cadeira; 
+        variavel_boleana_G  = variavel_boleana ;
+
+        //atribuicao de variavel parametro em var global 
+        variavel_inteira_G  = param_inteira_G; 
+        variavel_real_G     = param_real_G; 
+        variavel_cadeira_G  = param_cadeira_G; 
+        variavel_boleana_G  = param_boleana_G ;
+
+        //atribuicao de variavel interna em var global 
+        variavel_inteira_G  = variavel_inteira_I; 
+        variavel_real_G     = variavel_real_I; 
+        variavel_cadeira_G  = variavel_cadeira_I; 
+        variavel_boleana_G  = variavel_boleana_I ;
+
+        //atribuicao de variavel global em var global 
+        variavel_inteira_G  = variavel_inteira_G; 
+        variavel_real_G     = variavel_real_G; 
+        variavel_cadeira_G  = variavel_cadeira_G; 
+        variavel_boleana_G  = variavel_boleana_G;
+
+        //atribuicao de variavel global em var global 
+        variavel_real_G         = variavel_inteira_G; 
+        variavel_inteira_G      = variavel_real_G; 
+        variavel_boleana_G      = variavel_cadeira_G; 
+        variavel_cadeira_G      = variavel_boleana_G;
+        
+        //atribuicao de variavel global em var global 
+
+        variavel_real_G         = 1.1; 
+        variavel_inteira_G      = 1; 
+        variavel_boleana_G      = true; 
+        variavel_cadeira_G      = "";
+        
+        param_real_G         = 1.1; 
+        param_inteira_G      = 1; 
+        param_boleana_G      = true; 
+        param_cadeira_G      = "";
+
+        variavel_real_I         = 1.1; 
+        variavel_inteira_I      = 1;
+        variavel_boleana_I      = true; 
+        variavel_cadeira_I      = "";
+        
+
+}
+ 

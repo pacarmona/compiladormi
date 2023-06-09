@@ -1,0 +1,7 @@
+Erro Semântico: A qtd de parametros na chamada de função 'x' na linha 23 está incorreta.
+Erro Semântico: O parametro na chamada da função 'x' na linha 27 está com tipo incorreto.
+Erro Semântico: O parametro na chamada da função 'x' na linha 27 está com tipo incorreto.
+Erro Semântico: O parametro na chamada da função 'x' na linha 27 está com tipo incorreto.
+Erro Semântico: O parametro na chamada da função 'x' na linha 27 está com tipo incorreto.
+Erro Semântico: O parametro na chamada da função 'x' na linha 29 está com tipo incorreto.
+Erro Semântico: O parametro na chamada da função 'x' na linha 29 está com tipo incorreto.

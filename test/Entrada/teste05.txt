@@ -1,0 +1,48 @@
+const {
+    int xss =1;
+
+}
+var{
+        int resultado;
+       
+}
+
+
+
+
+function int main(    ){
+   
+var {
+    int sad;
+    int a,b;
+     float c,d;
+}  
+      if ( !(a > (b+1)) )  {
+	    	
+	}
+	else {
+	    	
+		if ( !(d+2.2 > c*2.2) ) { }
+		
+		if ( (d+11.1 > c*2.2) ) { }
+	    	
+	}   
+
+
+
+
+        if ( !(a > (b*b+a)) )  {
+	    	
+	}
+	else {
+	    	
+		if ( !(d+ 2 > c*2.2) ) { }
+		
+		if ( (d+11.1 > c*2 ) ) { }
+	    	
+	}   
+    
+.resultado = sad;
+}
+
+ 

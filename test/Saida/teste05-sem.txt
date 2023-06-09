@@ -1,0 +1,2 @@
+Erro Semântico: O tipo do operando '2' na operação da linha 39 é diferente do tipo da operação.
+Erro Semântico: O tipo do operando '2' na operação da linha 41 é diferente do tipo da operação.

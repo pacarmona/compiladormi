@@ -1,0 +1,152 @@
+"Name"     = 'Gramatica PLE 2019.2'
+"Author"   = 'Prof. Matheus G. Pires'
+
+"Start Symbol" = <Programa>
+
+! -------------------------------------------------
+! Character Sets
+! -------------------------------------------------
+
+{String Chars} = {Printable} + {HT} - ["\]
+
+! -------------------------------------------------
+! Terminais
+! -------------------------------------------------
+
+Identificador  = {Letter}{AlphaNumeric}*
+Cadeia         = '"' ( {String Chars} | '\' {Printable} )* '"'              
+NroReal        = {Digit}+ '.' {Digit}+
+NroInt         = {Digit}{Digit}*
+Tipo           = 'int' | 'float' | 'boolean' | 'string'
+OpRelacional   = '>' | '<' | '>=' | '<=' | '!=' | '=='
+OpLogico       =  '&&' | '||'
+Incremento     = '++' | '--'
+Soma           = '+' | '-'                
+Mult           = '*' | '/'
+
+! -------------------------------------------------
+! Regras
+! -------------------------------------------------
+
+<Programa> ::= <Constantes> <Variaveis> <Funcoes>
+
+! -------------------------------------------------
+! Constantes
+! -------------------------------------------------
+
+<Constantes> ::= const '{' Tipo Identificador '=' <Valores> <MaisConstantes> '}'
+              | <>
+              
+<MaisConstantes> ::= ',' Identificador '=' <Valores> <MaisConstantes>
+                  | ';' <OutrasConstantes>
+                  
+<OutrasConstantes> ::= Tipo Identificador '=' <Valores> <MaisConstantes>
+                    | <>
+
+! -------------------------------------------------
+! Variaveis
+! -------------------------------------------------
+
+<Variaveis> ::= var '{' Tipo Identificador <Matriz> <MaisVariaveis> '}'
+             | <>
+             
+<MaisVariaveis> ::= ',' Identificador <Matriz> <MaisVariaveis>
+                 | ';' <OutrasVariaveis>
+                 
+<OutrasVariaveis> ::= Tipo Identificador <Matriz> <MaisVariaveis>
+                   | <>
+              
+<Matriz> ::= '[' <MatrizId> ']'
+          |  '[' <MatrizId> ']' '[' <MatrizId> ']'
+          | <>
+          
+<MatrizId> ::= Identificador | NroInt
+            
+! -------------------------------------------------
+! Valores
+! -------------------------------------------------
+
+<Valores> ::= Cadeia | Identificador <Matriz> | NroInt | NroReal | 'true' | 'false'
+            
+! -------------------------------------------------
+! Funcoes e Procedimentos
+! -------------------------------------------------
+
+<Funcoes> ::= 'function' Tipo Identificador '(' <Parametros> ')' '{' <Variaveis> <Comandos> '.' Identificador '=' <Valores> ';' '}' <Funcoes>
+           |  'procedure' Identificador '(' <Parametros> ')' '{' <Variaveis> <Comandos> '}' <Funcoes>
+           | <> 
+
+<Parametros> ::= Tipo Identificador <MaisParametros>
+              | <>
+
+<MaisParametros> ::= ',' Identificador <MaisParametros>
+                  | ';' <Parametros>
+                  | <>
+
+! -------------------------------------------------
+! Comandos
+! -------------------------------------------------
+
+<Comandos> ::= <Write> <Comandos>
+            | <Read> <Comandos>
+            | <For> <Comandos>
+            | <If> <Comandos>
+            | <Atribuicao> <Comandos>
+            | <>
+            
+<Write> ::= write '(' <Imprimir> ')' ';' !pronto sincronizado $!
+
+<Imprimir> ::= Identificador <Matriz> | Cadeia !pronto sincronizado $!
+
+<Read> ::= read '(' Identificador <Matriz> ')' ';' !pronto sincronizado $!
+
+<For> ::= for '(' Identificador '=' <ContadorFor> ';' <ExpCondicional> ';' Identificador Incremento')' '{' <Comandos> '}' !pronto sincronizado $!
+
+<ContadorFor> ::= Identitificador | NroInt
+               
+<If> ::= 'if' '(' <ExpLogica> ')' '{' <Comandos> '}' <Else>
+      
+<Else> ::= 'else' '{' <Comandos> '}'!pronto sincronizado $!
+        | <>
+        
+<Atribuicao> ::= Identificador <Matriz> '=' <AtribuicaoValores> ';'
+              
+<AtribuicaoValores> ::= Cadeia | 'true' | 'false' | <ExpAritmetica> | Identificador '(' <ParametrosReais> ')'
+
+<ParametrosReais> ::= <Valores> <MaisParametrosReais>
+
+<MaisParametrosReais> ::= ',' <Valores> <MaisParametrosReais>
+                       | <>
+
+! -------------------------------------------------
+! Expressoes
+! -------------------------------------------------
+
+<ExpLogica> ::= <OpLogicoNeg> '(' <ExpCondicional> ')' <ExpLogicaElse> 
+             
+<ExpLogicaElse> ::= OpLogico <OpLogicoNeg> '(' <ExpCondicional> ')'
+                 | <>               
+
+<ExpCondicional> ::= <OpLogicoNeg> <ExpAritmetica> OpRelacional <OpLogicoNeg> <ExpAritmetica>
+                       
+<ExpAritmetica> ::= <Termo> Soma <ExpAritmetica> 
+                 | <Termo>
+                 
+<Termo> ::=  <Fator> <TermoAux>
+         
+<TermoAux> ::= Mult <Termo> <TermoAux>
+            | <>
+
+<Fator> ::= '(' <ExpAritmetica> ')' | Identificador <Matriz> <FatorIncremento> | NroInt | NroReal
+         
+<FatorIncremento> ::= Incremento | <>
+                   
+<OpLogicoNeg> ::= '!'
+               | <>  
+
+
+         
+
+
+
+
